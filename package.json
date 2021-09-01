@@ -1,16 +1,16 @@
 {
-  "name": "monorepo-template-cli",
+  "name": "create-monorepo-template",
   "version": "0.1.0",
   "private": true,
   "repository": "git@github.com:hanrenguang/monorepo-templates.git",
   "author": "hanrenguang <413526182@qq.com>",
   "license": "MIT",
   "bin": {
-    "monorepo-template-cli": "cli.js"
+    "create-monorepo-template": "cli.js"
   },
   "files": [
     "cli.js",
-    "template/*"
+    "lib"
   ],
   "main": "cli.js",
   "devDependencies": {
@@ -37,7 +37,7 @@
     }
   },
   "lint-staged": {
-    "./*.js": [
+    "*.js": [
       "eslint",
       "prettier --write"
     ]
