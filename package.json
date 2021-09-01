@@ -2,8 +2,8 @@
   "name": "create-monorepo-template",
   "version": "0.1.0",
   "private": true,
-  "repository": "git@github.com:hanrenguang/monorepo-templates.git",
-  "author": "hanrenguang <413526182@qq.com>",
+  "repository": "git@github.com:hanrenguang/create-monorepo-template.git",
+  "author": "Renguang Han",
   "license": "MIT",
   "bin": {
     "create-monorepo-template": "cli.js"
@@ -41,5 +41,9 @@
       "eslint",
       "prettier --write"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/hanrenguang/create-monorepo-template/issues"
+  },
+  "homepage": "https://github.com/hanrenguang/create-monorepo-template#readme"
 }
