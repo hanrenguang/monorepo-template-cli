@@ -1,0 +1,5 @@
+templates/**/*
+LICENSE
+CHANGELOG.md
+.prettierignore
+yarn.lock
