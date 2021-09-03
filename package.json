@@ -12,6 +12,10 @@
     "templates"
   ],
   "main": "cli.js",
+  "dependencies": {
+    "cac": "^6.7.3",
+    "inquirer": "^8.1.2"
+  },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
@@ -46,9 +50,5 @@
   "bugs": {
     "url": "https://github.com/hanrenguang/create-monorepo-template/issues"
   },
-  "homepage": "https://github.com/hanrenguang/create-monorepo-template#readme",
-  "dependencies": {
-    "cac": "^6.7.3",
-    "inquirer": "^8.1.2"
-  }
+  "homepage": "https://github.com/hanrenguang/create-monorepo-template#readme"
 }
