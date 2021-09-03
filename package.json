@@ -5,11 +5,11 @@
   "author": "Renguang Han",
   "license": "MIT",
   "bin": {
-    "create-monorepo-template": "cli.js"
+    "monorepo-template-cli": "cli.js"
   },
   "files": [
     "cli.js",
-    "lib"
+    "templates"
   ],
   "main": "cli.js",
   "devDependencies": {

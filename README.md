@@ -1,3 +1,3 @@
-# create-monorepo-template
+# monorepo-template-cli
 
-A cli tool for creating a monorepo project.
+A fast way to initialize a monorepo project.
