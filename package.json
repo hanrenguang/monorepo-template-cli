@@ -5,10 +5,10 @@
   "author": "Renguang Han",
   "license": "MIT",
   "bin": {
-    "monorepo-template-cli": "cli.js"
+    "monorepo-template-cli": "./src/cli.js"
   },
   "files": [
-    "cli.js",
+    "src",
     "templates"
   ],
   "main": "cli.js",
@@ -38,7 +38,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "./src/*.js": [
       "eslint",
       "prettier --write"
     ]
@@ -46,5 +46,9 @@
   "bugs": {
     "url": "https://github.com/hanrenguang/create-monorepo-template/issues"
   },
-  "homepage": "https://github.com/hanrenguang/create-monorepo-template#readme"
+  "homepage": "https://github.com/hanrenguang/create-monorepo-template#readme",
+  "dependencies": {
+    "cac": "^6.7.3",
+    "inquirer": "^8.1.2"
+  }
 }
