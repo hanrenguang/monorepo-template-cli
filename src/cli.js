@@ -7,15 +7,17 @@ const inquirer = require('inquirer')
 
 const generateProject = require('./generate')
 
+const currentDir = process.cwd()
+
 cli
   .command('[generate]', 'Generate a monorepo project from a template')
   .option('--template [template]', 'Choose a template')
-  .option('--output [outDir]', 'Choose a project root')
-  .option('--name [projectName]', 'Choose a project name')
+  .option('--output [outDir]', 'Choose a project root(relative path)')
+  .option('--projectName [projectName]', 'Choose a project name')
   .action(async (generate, options) => {
     let template = options.template
     let outDir = options.outDir
-    const name = options.name
+    const { projectName } = options
     const questions = []
 
     if (!template) {
@@ -45,12 +47,14 @@ cli
           }
         }
       )
+    } else {
+      outDir = path.join(currentDir, outDir)
     }
 
     if (questions.length > 0) {
       const { selectedTemplate, useCurrentDir, selectedOutDir } =
         await inquirer.prompt(questions)
-      const currentDir = process.cwd()
+
       template = selectedTemplate
       if (useCurrentDir) {
         outDir = currentDir
@@ -62,7 +66,7 @@ cli
     generateProject({
       template,
       outDir,
-      name
+      projectName
     })
   })
 
