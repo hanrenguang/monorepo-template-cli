@@ -1,7 +1,7 @@
 {
-  "name": "create-monorepo-template",
+  "name": "monorepo-template-cli",
   "version": "0.1.0",
-  "repository": "git@github.com:hanrenguang/create-monorepo-template.git",
+  "repository": "git@github.com:hanrenguang/monorepo-template-cli.git",
   "author": "Renguang Han",
   "license": "MIT",
   "bin": {
