@@ -1,4 +1,13 @@
-## 0.1.1 (2021-09-04)
+## [0.1.2](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.1.1...v0.1.2) (2021-09-04)
+
+
+### Bug Fixes
+
+* 修复命令行 outDir 参数错误 ([d01e212](https://github.com/hanrenguang/monorepo-template-cli/commit/d01e212887db3a73f243cfa3389c6c4b3aa6aea3))
+
+
+
+## [0.1.1](https://github.com/hanrenguang/monorepo-template-cli/compare/48de90bda0b4b2a569c827c0727915395903c36d...v0.1.1) (2021-09-04)
 
 
 ### Features
