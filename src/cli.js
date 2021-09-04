@@ -12,11 +12,11 @@ const currentDir = process.cwd()
 cli
   .command('[generate]', 'Generate a monorepo project from a template')
   .option('--template [template]', 'Choose a template')
-  .option('--output [outDir]', 'Choose a project root(relative path)')
+  .option('--outDir [outDir]', 'Choose a project root(relative path)')
   .option('--projectName [projectName]', 'Choose a project name')
   .action(async (generate, options) => {
     let template = options.template
-    let outDir = options.outDir
+    let outDir = `${options.outDir}`
     const { projectName } = options
     const questions = []
 
@@ -56,10 +56,12 @@ cli
         await inquirer.prompt(questions)
 
       template = selectedTemplate
-      if (useCurrentDir) {
-        outDir = currentDir
-      } else {
-        outDir = path.join(currentDir, selectedOutDir)
+      if (questions.length > 1) {
+        if (useCurrentDir) {
+          outDir = currentDir
+        } else {
+          outDir = path.join(currentDir, selectedOutDir)
+        }
       }
     }
 
