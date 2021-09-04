@@ -34,7 +34,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "version": "yarn changelog && git add ."
   },
   "config": {
     "commitizen": {
