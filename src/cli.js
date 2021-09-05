@@ -16,7 +16,10 @@ cli
   .option('--projectName [projectName]', 'Choose a project name')
   .action(async (generate, options) => {
     let template = options.template
-    let outDir = `${options.outDir}`
+    let outDir =
+      options.outDir !== null && options.outDir !== undefined
+        ? `${options.outDir}`
+        : ''
     const { projectName } = options
     const questions = []
 
