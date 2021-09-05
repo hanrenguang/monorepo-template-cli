@@ -11,9 +11,9 @@ const currentDir = process.cwd()
 
 cli
   .command('[generate]', 'Generate a monorepo project from a template')
-  .option('--template [template]', 'Choose a template')
-  .option('--outDir [outDir]', 'Choose a project root(relative path)')
-  .option('--projectName [projectName]', 'Choose a project name')
+  .option('-t, --template [template]', 'Choose a template')
+  .option('-o, --outDir [outDir]', 'Choose a project root(relative path)')
+  .option('-n, --projectName [projectName]', 'Choose a project name')
   .action(async (generate, options) => {
     let template = options.template
     let outDir =
