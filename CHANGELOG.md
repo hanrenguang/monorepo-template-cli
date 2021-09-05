@@ -1,3 +1,18 @@
+## [0.1.3](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.1.2...v0.1.3) (2021-09-05)
+
+
+### Bug Fixes
+
+* 修复 outDir 指向 'undefined' 的问题 ([d2a4ace](https://github.com/hanrenguang/monorepo-template-cli/commit/d2a4ace3f4cbfaa6c6602c3eadc322bbfe1dfdcd))
+* 修复 template 指向 undefined 的问题 ([c842e02](https://github.com/hanrenguang/monorepo-template-cli/commit/c842e024a144795e5d1371d70bba324364f10530))
+
+
+### Features
+
+* 添加命令行 flag 简写 ([087bb2f](https://github.com/hanrenguang/monorepo-template-cli/commit/087bb2f0a8cc0d4375dbcbd0283b3d263d0006bb))
+
+
+
 ## [0.1.2](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.1.1...v0.1.2) (2021-09-04)
 
 
