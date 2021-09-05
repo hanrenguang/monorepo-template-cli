@@ -54,17 +54,18 @@ cli
       outDir = path.join(currentDir, outDir)
     }
 
-    if (questions.length > 0) {
-      const { selectedTemplate, useCurrentDir, selectedOutDir } =
-        await inquirer.prompt(questions)
+    const { selectedTemplate, useCurrentDir, selectedOutDir } =
+      await inquirer.prompt(questions)
+    const questionsLen = questions.length
 
+    if (questionsLen === 1) {
       template = selectedTemplate
-      if (questions.length > 1) {
-        if (useCurrentDir) {
-          outDir = currentDir
-        } else {
-          outDir = path.join(currentDir, selectedOutDir)
-        }
+    } else if (questionsLen === 3) {
+      template = selectedTemplate
+      if (useCurrentDir) {
+        outDir = currentDir
+      } else {
+        outDir = path.join(currentDir, selectedOutDir)
       }
     }
 
