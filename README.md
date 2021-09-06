@@ -17,3 +17,7 @@ $ monorepo-template-cli --help
 
 - yarn-workspace
 - lerna
+
+## LICENSE
+
+MIT
