@@ -1,11 +1,14 @@
 const path = require('path')
 const fs = require('fs')
+const process = require('process')
+
+const execa = require('execa')
 
 /**
  * Generate the monorepo project from a template
  * @param {Object} options
  */
-function generateProject(options) {
+async function generateProject(options) {
   const { template, projectName } = options
   let outDir
 
@@ -15,10 +18,18 @@ function generateProject(options) {
     outDir = path.join(options.outDir, projectName)
   }
 
-  checkDirAndCreate(outDir)
-
+  // generate project
   const templateDir = path.join(__dirname, `../templates/template-${template}`)
   copyTemplate(templateDir, outDir)
+  // create packages directory
+  checkDirAndCreate(path.join(outDir, 'packages'))
+  // git init
+  try {
+    process.chdir(outDir)
+    await execa('git', ['init'])
+  } catch (err) {
+    console.error(err.message)
+  }
 }
 
 /**

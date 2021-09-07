@@ -69,11 +69,7 @@ cli
       }
     }
 
-    generateProject({
-      template,
-      outDir,
-      projectName
-    })
+    await generateProject({ template, outDir, projectName })
   })
 
 cli.help()
