@@ -3,6 +3,16 @@ const fs = require('fs')
 const process = require('process')
 
 const execa = require('execa')
+const chalk = require('chalk')
+
+/**
+ * log message
+ * @param {String} msg
+ * @param {String} color
+ */
+function step(msg, color) {
+  console.log(chalk[color](`\n  ${msg}`))
+}
 
 /**
  * Generate the monorepo project from a template
@@ -20,16 +30,20 @@ async function generateProject(options) {
 
   // generate project
   const templateDir = path.join(__dirname, `../templates/template-${template}`)
+  step(`outDir ===> ${outDir}`, 'cyan')
   copyTemplate(templateDir, outDir)
   // create packages directory
   checkDirAndCreate(path.join(outDir, 'packages'))
   // git init
   try {
+    step('git init ...', 'cyan')
     process.chdir(outDir)
     await execa('git', ['init'])
   } catch (err) {
-    console.error(err.message)
+    step(err.message, 'red')
   }
+
+  step('done', 'cyan')
 }
 
 /**
