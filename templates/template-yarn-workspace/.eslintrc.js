@@ -7,5 +7,8 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 12
+  },
+  env: {
+    jest: true
   }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "example",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path ."
+  }
+}

@@ -32,8 +32,6 @@ async function generateProject(options) {
   const templateDir = path.join(__dirname, `../templates/template-${template}`)
   step(`outDir ===> ${outDir}`, 'cyan')
   copyTemplate(templateDir, outDir)
-  // create packages directory
-  checkDirAndCreate(path.join(outDir, 'packages'))
   // git init
   try {
     step('git init ...', 'cyan')
