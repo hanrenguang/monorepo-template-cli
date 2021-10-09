@@ -12,10 +12,10 @@ $ yarn
 
 Install or remove dependency for monorepo project:
 ```bash
-$ yarn add/remove [package] -W
+$ yarn add/remove <package> -W
 ```
 
 Install or remove dependency for sub-packages:
 ```bash
-$ yarn workspace [sub-package-name] add/remove [package]
+$ yarn workspace <sub-package-name> add/remove <package>
 ```
