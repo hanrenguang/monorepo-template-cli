@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.2.0...v0.2.1) (2021-10-22)
+
+
+### Features
+
+* 添加 yarn workspaces 自定义 release 脚本 ([0b7e46a](https://github.com/hanrenguang/monorepo-template-cli/commit/0b7e46ae401ec149131f86c3e3a0fbf7b0d9236c))
+
+
+
 # [0.2.0](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.1.4...v0.2.0) (2021-09-21)
 
 
