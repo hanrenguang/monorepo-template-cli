@@ -52,9 +52,9 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/hanrenguang/create-monorepo-template/issues"
+    "url": "https://github.com/hanrenguang/monorepo-template-cli/issues"
   },
-  "homepage": "https://github.com/hanrenguang/create-monorepo-template#readme",
+  "homepage": "https://github.com/hanrenguang/monorepo-template-cli#readme",
   "engines": {
     "node": ">=10.12.0"
   }
