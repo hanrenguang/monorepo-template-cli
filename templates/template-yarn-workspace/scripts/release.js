@@ -62,7 +62,7 @@ const runIfNotDry = args.dry ? dryRun : run
  */
 const step = (msg) => console.log(chalk.cyan(msg))
 
-;(async function main() {
+async function main() {
   if (!targetVersion) {
     // get current version from one public package
     // that assumes all of your packages have the same version number
@@ -156,7 +156,7 @@ const step = (msg) => console.log(chalk.cyan(msg))
   }
 
   console.log()
-})()
+}
 
 /**
  * get package.json information of all packages
@@ -262,3 +262,9 @@ async function gitTag() {
   await runIfNotDry('git', ['push', 'origin', `refs/tags/${suffixVersion}`])
   await runIfNotDry('git', ['push'])
 }
+
+main().catch(err => {
+  console.error(e.message)
+  console.error(e.stack)
+  process.exit(1)
+})
