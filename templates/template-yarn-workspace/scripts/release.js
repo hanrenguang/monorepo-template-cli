@@ -264,7 +264,7 @@ async function gitTag() {
 }
 
 main().catch(err => {
-  console.error(e.message)
-  console.error(e.stack)
+  console.error(err.message)
+  console.error(err.stack)
   process.exit(1)
 })
