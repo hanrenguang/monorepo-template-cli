@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.2.1...v0.2.2) (2021-12-04)
+
+
+### Bug Fixes
+
+* release 脚本错误 ([4753188](https://github.com/hanrenguang/monorepo-template-cli/commit/47531882f7a007651c7abed16e85c6d425bcc177))
+
+
+
 ## [0.2.1](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.2.0...v0.2.1) (2021-10-22)
 
 
