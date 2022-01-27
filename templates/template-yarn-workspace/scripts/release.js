@@ -233,7 +233,12 @@ async function publishPackages() {
   }
 
   for (const pkg of pkgInfoList) {
-    const pkgName = pkg.pkgInfo.name
+    const { pkgInfo, isPublic } = pkg
+    if (!isPublic) {
+      // skip private package
+      continue
+    }
+    const pkgName = pkgInfo.name
     publicArgs[1] = path.resolve(pkg.pkgPath, '..')
     try {
       await runIfNotDry('yarn', publicArgs, {
