@@ -1,3 +1,12 @@
+## [0.2.3](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.2.2...v0.2.3) (2022-01-27)
+
+
+### Bug Fixes
+
+* 发布脚本过滤 private 子包 ([927a26e](https://github.com/hanrenguang/monorepo-template-cli/commit/927a26e081eda0af1dbd62e93850d153978f6237))
+
+
+
 ## [0.2.2](https://github.com/hanrenguang/monorepo-template-cli/compare/v0.2.1...v0.2.2) (2021-12-04)
 
 
